@@ -60,6 +60,8 @@ function Time_function() {
   document.getElementById("Time_of_day").innerHTML = Reply;
 }
 
-console.log(2+5;
+let x="potato"
+
+console.log(y1)
 
   //intentionall error for console.log missing )
