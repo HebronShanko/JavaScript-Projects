@@ -59,3 +59,7 @@ function Time_function() {
   }
   document.getElementById("Time_of_day").innerHTML = Reply;
 }
+
+console.log(2+5;
+
+  //intentionall error for console.log missing )
