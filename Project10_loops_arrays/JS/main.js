@@ -14,9 +14,10 @@ function Call_Loop() {
 
 var Instruments = ["drums", "guitar", "piano", "bass", "flute", "trumpet", "violin"];
 var Content = "";
-var Y;
+
 function for_loop() {
-  for (Y = 0; Y < Instruments.lenght; Y++) {
+  
+  for (var Y = 0; Y < Instruments.length; Y++) {
     Content += Instruments[Y] + "<br>";
   }
   document.getElementById("List_of_Instruments").innerHTML = Content;
