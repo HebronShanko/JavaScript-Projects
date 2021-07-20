@@ -6,9 +6,9 @@ function placeXorO(squareNumber) {
   if (!selectedSqaures.some(element => element.includes(squareNumber))) {
     let select = document.getElementById(squareNumber);
     if (activePlayer === 'X') {
-      select.style.backgroundImage = 'url ("images/x.png")';
+      select.style.backgroundImage = 'url("images/x.png")';
     } else {
-      select.style.backgroundImage = 'url ("images/o.png")';
+      select.style.backgroundImage = 'url("images/o.png")';
     }
     selectedSqaures.push(squareNumber + activePlayer);
     checkWinConditions();
@@ -129,8 +129,8 @@ function drawWinLine(coordX1,coordY1,coordX2,coordY2) {
 
 function resetGame() {
   for (let i = 0; i < 9; i++) {
-    let square = document.getElementById(string(i))
-    square.style.backgroundImage = ''
+    let square = document.getElementById(String(i))
+    square.style.backgroundimage = ''
   }
   selectedSqaures = []; 
 }
