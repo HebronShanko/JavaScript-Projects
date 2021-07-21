@@ -84,7 +84,7 @@ function audio(audioURL) {
   audio.play();
 }
 
-function drawWinLine(coordX1,coordY1,coordX2,coordY2) {
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
   const canvas = document.getElementById('win-lines')
   const c = canvas.getContext('2d');
   let x1 = coordX1, 
@@ -96,7 +96,7 @@ function drawWinLine(coordX1,coordY1,coordX2,coordY2) {
 
   function animateLineDrawing () {
     const animationLoop = requestAnimationFrame(animateLineDrawing);
-    c.clearRect(0,0,608,608)
+    c.clearRect(0, 0, 608, 608)
     c.beginPath();
     c.moveTo(x1, y1)
     c.lineTo(x, y)
@@ -104,33 +104,33 @@ function drawWinLine(coordX1,coordY1,coordX2,coordY2) {
     c.strokeStyle = 'rbga(70, 255, 33, .8)';
     c.stroke ();
     if (x1 <= x2 && y1 <= y2) {
-      if (x < x2) { x += 10;}
-      if (y < y2) { y += 10;}
-      if (x >= x2 && y>=y2) { cancelAnimationFrame(animationLoop); }
-  }
-  if (x1 <= x2 && y1 >= y2) {
-    if (x < x2) { x += 10;}
-    if (y < y2) { y += 10;}
-    if (x >= x2 && y>=y2) { cancelAnimationFrame(animationLoop); }
+       if (x < x2) { x += 10; }
+       if (y < y2) { y += 10; }
+       if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+    }
+    if (x1 <= x2 && y1 >= y2) {
+        if (x < x2) { x += 10; }
+        if (y > y2) { y -= 10; }
+        if (x >= x2 && y <= y2 ) { cancelAnimationFrame(animationLoop); }
   }
 }
 
   function clear () {
     const animationLoop = requestAnimationFrame(clear);
-    c.clearRect(0,0,608,608);
+    c.clearRect(0, 0, 608, 608);
     cancelAnimationFrame(animationLoop);
   }
 
   disableClick();
   audio('./media/winGame.mp3')
   animateLineDrawing();
-    setTimeout(function () { clear (); resetGame(); }, 1000);
+  setTimeout(function () { clear (); resetGame(); }, 1000);
 }    
 
 function resetGame() {
   for (let i = 0; i < 9; i++) {
     let square = document.getElementById(String(i))
-    square.style.backgroundimage = ''
+    square.style.backgroundImage = ''
   }
   selectedSqaures = []; 
 }
