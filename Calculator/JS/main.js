@@ -32,7 +32,7 @@ const Calculator = {
        Calculator.First_Operand = Value_of_Input;
    } else if (operator) {
      const Value_Now = First_Operand || 0;
-     let result = Perform_Calculator[operator](Value_Now, Value_of_Input);
+     let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
      result = Number(result).toFixed(9)
      result = (result * 1).toString()
      Calculator.Display_Value = parseFloat(result);
