@@ -34,6 +34,7 @@ function getTopping(runningTotal,text1) {
   for (var j = 0;  j < toppingArray.length; j++) {
     if (toppingArray[j].checked) {
       seletedTopping.push(toppingArray[j].value);
+      console.log("selected topping time: ("+toppingArray[j].value+")");
       text1 = text1+toppingArray[j].value+"<br>";
     }
   }
