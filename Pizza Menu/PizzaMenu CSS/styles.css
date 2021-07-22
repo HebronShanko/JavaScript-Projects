@@ -59,3 +59,9 @@ div {
   font-family: fantasy;
   color: rgb(110, 44, 44);
 }
+
+.center {
+	width:200px;
+	height:200px;
+	float:left;
+}
